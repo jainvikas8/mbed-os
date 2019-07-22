@@ -40,7 +40,7 @@ static void hard_fault_handler_test();
 // return to other function.
 // compiler will not produce prolog and epilog code for naked function
 // and thus will preserve stack in un-corrupted state
-__attribute__((naked)) void call_mem(uint32_t addr);
+//__attribute__((naked)) void call_mem(uint32_t addr);
 
 #ifdef __cplusplus
 }

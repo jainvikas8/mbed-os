@@ -78,16 +78,25 @@ static void hard_fault_handler_test()
     ((uint32_t *)sp)[PC_INDEX_IN_STACK_FRAME] = (uint32_t)do_nothing;
 }
 
-__attribute__((naked)) void call_mem(uint32_t addr)
+__attribute__((naked)) uint32_t call_mem(uint32_t addr)
 {
     // Only first instruction will be executed in positive flow,
     // since exception will be generated for invalid memory access.
     // Other instructions are for calling do_nothing function according to AAPCS.
     __ASM(
-        "LDR     r3, [r0]\n"
+        "LDR     r0, [r0]\n"
         "BX      lr\n"
     );
 }
+
+
+/* 
+might or might use stack if no compiler optimisation is used, if stack used, then corruption with occur
+__attribute__((noinline)) void call_mem(uint32_t addr)
+{
+    *(volatile uint32_t *)addr;;;
+}
+*/
 
 static void test_memory(uint32_t addr, uint32_t expected_fatal_count)
 {

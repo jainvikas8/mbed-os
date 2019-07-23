@@ -78,6 +78,11 @@ static void hard_fault_handler_test()
     ((uint32_t *)sp)[PC_INDEX_IN_STACK_FRAME] = (uint32_t)do_nothing;
 }
 
+// Using naked function as it will not be executed from beginning to the end.
+// The execution flow expected to be interrupted by exception and we will
+// return to other function.
+// compiler will not produce prolog and epilog code for naked function
+// and thus will preserve stack in un-corrupted state
 __attribute__((naked)) uint32_t call_mem(uint32_t addr)
 {
     // Only first instruction will be executed in positive flow,

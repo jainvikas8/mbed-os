@@ -35,13 +35,6 @@ void do_nothing(void);
 // Test exception handler
 static void hard_fault_handler_test();
 
-// Using naked function as it will not be executed from beginning to the end.
-// The execution flow expected to be interrupted by exception and we will
-// return to other function.
-// compiler will not produce prolog and epilog code for naked function
-// and thus will preserve stack in un-corrupted state
-//__attribute__((naked)) void call_mem(uint32_t addr);
-
 #ifdef __cplusplus
 }
 #endif

@@ -94,15 +94,6 @@ __attribute__((naked)) uint32_t call_mem(uint32_t addr)
     );
 }
 
-
-/* 
-might or might use stack if no compiler optimisation is used, if stack used, then corruption with occur
-__attribute__((noinline)) void call_mem(uint32_t addr)
-{
-    *(volatile uint32_t *)addr;;;
-}
-*/
-
 static void test_memory(uint32_t addr, uint32_t expected_fatal_count)
 {
     call_mem(addr);

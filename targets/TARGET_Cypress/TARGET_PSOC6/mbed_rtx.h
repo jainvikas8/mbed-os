@@ -2,7 +2,7 @@
  * mbed Microcontroller Library
  * Copyright (c) 2017-2018 Future Electronics
  * Copyright (c) 2016 u-blox
- * Copyright (c) 2019, Arm Limited and affiliates.
+ * Copyright (c) 2019-2020, Arm Limited and affiliates.
  * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,6 +21,10 @@
 #ifndef MBED_MBED_RTX_H
 #define MBED_MBED_RTX_H
 
-/* This file is required, but doesn't actually need to do anything. */
+/*
+ * This is used to obtain Object specific Memory allocation required for
+ * mutex creation in an efficient way.
+ */
+#define OS_MUTEX_OBJ_MEM    1
 
 #endif  /* MBED_MBED_RTX_H */

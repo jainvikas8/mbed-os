@@ -12,7 +12,7 @@
          },
          "idle-thread-stack-size": {
             "help": "The size of the idle thread's stack",
-            "value": 512
+            "value": 1024
          },
          "thread-stack-size": {
             "help": "The default stack size of new threads",

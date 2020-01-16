@@ -5,7 +5,7 @@
                    "-fmessage-length=0", "-fno-exceptions",
                    "-ffunction-sections", "-fdata-sections", "-funsigned-char",
                    "-MMD", "-fno-delete-null-pointer-checks",
-                   "-fomit-frame-pointer", "-Os", "-g", "-DMBED_TRAP_ERRORS_ENABLED=1"],
+                   "-fomit-frame-pointer", "-g", "-DMBED_TRAP_ERRORS_ENABLED=1"],
         "asm": ["-x", "assembler-with-cpp"],
         "c": ["-std=gnu11"],
         "cxx": ["-std=gnu++14", "-fno-rtti", "-Wvla"],
@@ -15,7 +15,7 @@
                "-Wl,-n"]
     },
     "ARMC6": {
-        "common": ["-c", "--target=arm-arm-none-eabi", "-mthumb", "-Os",
+        "common": ["-c", "--target=arm-arm-none-eabi", "-mthumb",
                    "-Wno-armcc-pragma-push-pop", "-Wno-armcc-pragma-anon-unions",
                    "-Wno-reserved-user-defined-literal", "-Wno-deprecated-register",
                    "-DMULADDC_CANNOT_USE_R7", "-fdata-sections",

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019, Arm Limited. All rights reserved.
+ * Copyright (c) 2017-2020, Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  *
@@ -11,6 +11,8 @@
 
 #include <string.h>
 #include "cmsis_os2.h"
+#include "rtx_os.h"
+#include "stdlib.h"
 
 /* This is an example OS abstraction layer for CMSIS-RTOSv2 */
 
@@ -33,9 +35,19 @@ void *os_wrapper_thread_new(const char *name, int32_t stack_size,
 void *os_wrapper_semaphore_create(uint32_t max_count, uint32_t initial_count,
                                   const char *name)
 {
-    osSemaphoreAttr_t sema_attrib = {0};
+    osRtxSemaphore_t *semaphore;
 
-    sema_attrib.name = name;
+    semaphore = (osRtxSemaphore_t *)malloc(osRtxSemaphoreCbSize);
+    if(semaphore == NULL){
+        return NULL;
+    }
+
+    const osSemaphoreAttr_t sema_attrib = {
+        .name = name,
+        .attr_bits = 0,
+        .cb_mem = semaphore,
+        .cb_size = osRtxSemaphoreCbSize
+    };
 
     return (void *)osSemaphoreNew(max_count, initial_count, &sema_attrib);
 }
@@ -75,21 +87,25 @@ uint32_t os_wrapper_semaphore_delete(void *handle)
         return OS_WRAPPER_ERROR;
     }
 
+    free(handle);
+
     return OS_WRAPPER_SUCCESS;
 }
 
 void *os_wrapper_mutex_create(void)
 {
+    osRtxMutex_t *mutex;
+
+    mutex = (osRtxMutex_t *)malloc(osRtxMutexCbSize);
+    if(mutex == NULL){
+        return NULL;
+    }
+
     const osMutexAttr_t attr = {
         .name = NULL,
-        .attr_bits = osMutexPrioInherit, /* Priority inheritance is recommended
-                                          * to enable if it is supported.
-                                          * For recursive mutex and the ability
-                                          * of auto release when owner being
-                                          * terminated is not required.
-                                          */
-        .cb_mem = NULL,
-        .cb_size = 0U
+        .attr_bits = osMutexRecursive | osMutexPrioInherit | osMutexRobust,
+        .cb_mem = mutex,
+        .cb_size = osRtxMutexCbSize
     };
 
     return (void *)osMutexNew(&attr);
@@ -141,6 +157,8 @@ uint32_t os_wrapper_mutex_delete(void *handle)
     if (status != osOK) {
         return OS_WRAPPER_ERROR;
     }
+
+    free(handle);
 
     return OS_WRAPPER_SUCCESS;
 }

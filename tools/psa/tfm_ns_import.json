@@ -34,41 +34,41 @@
         },
         {
             "src_file": "interface/src/tfm_multi_core_api.c",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/src/tfm_multi_core_api.c"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/src/tfm_multi_core_api.c"
         },
         {
             "src_file": "interface/src/tfm_multi_core_psa_ns_api.c",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/src/tfm_multi_core_psa_ns_api.c"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/src/tfm_multi_core_psa_ns_api.c"
         },
         {
             "src_file": "interface/src/tfm_ns_mailbox.c",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/src/tfm_ns_mailbox.c"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/src/tfm_ns_mailbox.c"
         },
         {
             "src_file": "interface/include/tfm_multi_core_api.h",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/inc/tfm_multi_core_api.h"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/inc/tfm_multi_core_api.h"
         },
         {
             "src_file": "interface/include/tfm_ns_mailbox.h",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/inc/tfm_ns_mailbox.h"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/inc/tfm_ns_mailbox.h"
         },
         {
             "src_file": "interface/include/tfm_mailbox.h",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/inc/tfm_mailbox.h"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/inc/tfm_mailbox.h"
         },
         {
             "src_file": "install/export/tfm/src/platform_multicore.c",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/src/platform_multicore.c"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/src/platform_multicore.c"
         },
         {
             "src_file": "install/export/tfm/src/platform_ns_mailbox.c",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/src/platform_ns_mailbox.c"
+            "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/src/platform_ns_mailbox.c"
         }
     ],
     "folders": [
         {
             "src_folder": "install/export/tfm/inc",
-            "dst_folder": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_TWINCPU/inc"
+            "dst_folder": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/inc"
         },
         {
             "src_folder": "install/export/tfm/include",

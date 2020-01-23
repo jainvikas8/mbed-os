@@ -247,7 +247,7 @@ If the python script is invoked without any options then TF-M will be built for 
 features/FEATURE_PSA/
 ├── TARGET_TFM
 │   ├── TARGET_TFM_V8M
-│   └── TARGET_TFM_TWINCPU
+│   └── TARGET_TFM_DUALCPU
 └── TARGET_MBED_PSA_SRV
     ├── services
     │   ├── storage

@@ -104,7 +104,7 @@
         ],
         "extra_labels": [
             "TFM",
-            "TFM_TWINCPU"
+            "TFM_DUALCPU"
         ],
         "device_has": [
             "TRNG"

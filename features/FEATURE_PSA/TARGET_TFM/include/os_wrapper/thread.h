@@ -56,6 +56,8 @@ uint32_t os_wrapper_thread_get_priority(void *handle, uint32_t *priority);
  */
 void os_wrapper_thread_exit(void);
 
+uint32_t os_wrapper_thread_delete(void *handle);
+
 #ifdef __cplusplus
 }
 #endif

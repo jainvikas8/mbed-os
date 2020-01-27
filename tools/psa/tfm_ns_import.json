@@ -29,10 +29,6 @@
             "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_V8M/src/tfm_ns_interface.c"
         },
         {
-            "src_file": "app/os_wrapper_cmsis_rtos_v2.c",
-            "dst_file": "features/FEATURE_PSA/TARGET_TFM/src/os_wrapper_cmsis_rtos_v2.c"
-        },
-        {
             "src_file": "interface/src/tfm_multi_core_api.c",
             "dst_file": "features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU/src/tfm_multi_core_api.c"
         },

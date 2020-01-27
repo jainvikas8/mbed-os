@@ -48,7 +48,7 @@ dependencies = {
     "trusted-firmware-m":
     ['https://git.trustedfirmware.org/trusted-firmware-m.git',
      'feature-twincpu',
-     '14d4a73cae631ea291f4d8d04e3c588ea9e955c8'],
+     'ab1aaf9e2489ef0dc19fdc3de04b6d6a2e1ddb81'],
     "mbedtls": ['https://github.com/ARMmbed/mbedtls.git',
                 'mbedtls-2.7.9'],
     "mbed-crypto": ['https://github.com/ARMmbed/mbed-crypto.git',
@@ -345,7 +345,7 @@ def _run_cmake_build(cmake_build_dir, debug, tgt):
 
     cmake_cmd = ['cmake', '-GUnix Makefiles']
     cmake_cmd.append('-DPROJ_CONFIG=' + (join(TF_M_BUILD_DIR,
-                        'trusted-firmware-m', 'configs/ConfigCoreIPC.cmake')))
+                        'trusted-firmware-m', 'configs/ConfigRegressionIPC.cmake')))
     cmake_cmd.append('-DTARGET_PLATFORM=' + tgt[1])
     cmake_cmd.append('-DCOMPILER=' + tgt[2])
     if debug:

@@ -81,6 +81,14 @@
         {
             "src_folder": "install/export/tfm/include/psa_manifest",
             "dst_folder": "features/FEATURE_PSA/TARGET_TFM/include/psa_manifest"
+        },
+        {
+            "src_folder": "install/export/tfm/test/inc",
+            "dst_folder": "features/FEATURE_PSA/TARGET_TFM/test/inc"
+        },
+        {
+            "src_folder": "install/export/tfm/test/lib",
+            "dst_folder": "features/FEATURE_PSA/TARGET_TFM/test/lib"
         }
     ]
 }

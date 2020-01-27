@@ -443,7 +443,6 @@ def _copy_tfm_ns_files(source):
                 # list of files and folder relative to cmake build folder. 
                 # But it doesn't export following files tfm_multi_core_api.c,
                 # tfm_multi_core_psa_ns_api.c, tfm_ns_mailbox.c. These files
-                # along with the OS abstraction layer app/os_wrapper_cmsis_rtos_v2.c
                 # are handled as an exception.
                 # https://developer.trustedfirmware.org/T642
                 src_file = join(source, os.pardir, f["src_file"])

@@ -4,7 +4,13 @@
 ^features/FEATURE_PSA/TARGET_MBED_PSA_SRV/services/attestation/attestation.h
 ^features/FEATURE_PSA/TARGET_MBED_PSA_SRV/services/attestation/implementation/tfm_impl
 ^features/FEATURE_PSA/TARGET_MBED_PSA_SRV/services/attestation/qcbor
-^features/FEATURE_PSA/TARGET_TFM
+^features/FEATURE_PSA/TARGET_TFM/include
+^features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_DUALCPU
+^features/FEATURE_PSA/TARGET_TFM/TARGET_TFM_V8M
+^features/FEATURE_PSA/TARGET_TFM/test
+^features/FEATURE_PSA/TARGET_TFM/src/tfm_crypto_ipc_api.c
+^features/FEATURE_PSA/TARGET_TFM/src/tfm_initial_attestation_ipc_api.c
+^features/FEATURE_PSA/TARGET_TFM/src/tfm_sst_ipc_api.c
 ^features/FEATURE_PSA/TARGET_MBED_PSA_SRV/TESTS
 ^features/cryptocell
 ^features/FEATURE_BLE

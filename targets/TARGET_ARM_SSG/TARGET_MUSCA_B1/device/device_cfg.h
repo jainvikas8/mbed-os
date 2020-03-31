@@ -126,7 +126,7 @@
 #define USEC_REPORTED_FREQ_HZ            (TIMER_FREQ_HZ >> USEC_REPORTED_SHIFT)
 #define USEC_REPORTED_BITS               (32 - USEC_REPORTED_SHIFT)
 
-#define UART_DEFAULT_BAUD_RATE           9600U
+#define DEFAULT_UART_BAUDRATE            9600U
 #endif // TARGET_MUSCA_B1_NS
 
 #endif  /* __ARM_LTD_DEVICE_CFG_H__ */

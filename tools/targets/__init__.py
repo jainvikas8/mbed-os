@@ -31,6 +31,10 @@ from tools.targets.LPC import patch
 from tools.paths import TOOLS_BOOTLOADERS
 from tools.utils import json_file_to_dict, NotSupportedException
 
+# Add PSA TF-M binary utility scripts in system path
+from os.path import dirname, abspath, join
+TFM_SCRIPTS = abspath(join(dirname(__file__), '..', 'psa', 'tfm', 'bin_utils'))
+sys.path.insert(0, TFM_SCRIPTS)
 
 __all__ = ["target", "TARGETS", "TARGET_MAP", "TARGET_NAMES", "CORE_LABELS",
            "CORE_ARCH", "HookError", "generate_py_target", "Target",

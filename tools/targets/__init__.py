@@ -407,7 +407,7 @@ class Target(namedtuple(
 
     @property
     def is_TFM_target(self):
-        return getattr(self, 'tfm_target_name', False)
+        return 'PSA' in self.features
 
     def get_post_build_hook(self, toolchain_labels):
         """Initialize the post-build hooks for a toolchain. For now, this

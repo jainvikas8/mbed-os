@@ -81,4 +81,8 @@
   #warning Not supported compiler type
 #endif
 
+#if defined(TARGET_MUSCA_B1)
+#include "cmsis_nvic.h"
+#endif
+
 #endif /*__MUSCA_B1_CMSIS_H__ */

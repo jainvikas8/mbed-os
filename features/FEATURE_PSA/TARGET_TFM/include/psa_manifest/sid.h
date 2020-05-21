@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, Arm Limited. All rights reserved.
+ * Copyright (c) 2019-2020, Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  *
@@ -45,6 +45,8 @@ extern "C" {
 #define TFM_SP_PLATFORM_SYSTEM_RESET_VERSION                       (1U)
 #define TFM_SP_PLATFORM_IOCTL_SID                                  (0x00000041U)
 #define TFM_SP_PLATFORM_IOCTL_VERSION                              (1U)
+#define TFM_SP_PLATFORM_NV_COUNTER_SID                             (0x00000042U)
+#define TFM_SP_PLATFORM_NV_COUNTER_VERSION                         (1U)
 
 /******** TFM_SP_INITIAL_ATTESTATION ********/
 #define TFM_ATTEST_GET_TOKEN_SID                                   (0x00000020U)
@@ -59,10 +61,6 @@ extern "C" {
 #define SPM_CORE_TEST_INIT_SUCCESS_VERSION                         (1U)
 #define SPM_CORE_TEST_DIRECT_RECURSION_SID                         (0x0000F021U)
 #define SPM_CORE_TEST_DIRECT_RECURSION_VERSION                     (1U)
-#define SPM_CORE_TEST_MPU_ACCESS_SID                               (0x0000F022U)
-#define SPM_CORE_TEST_MPU_ACCESS_VERSION                           (1U)
-#define SPM_CORE_TEST_MEMORY_PERMISSIONS_SID                       (0x0000F023U)
-#define SPM_CORE_TEST_MEMORY_PERMISSIONS_VERSION                   (1U)
 #define SPM_CORE_TEST_SS_TO_SS_SID                                 (0x0000F024U)
 #define SPM_CORE_TEST_SS_TO_SS_VERSION                             (1U)
 #define SPM_CORE_TEST_SS_TO_SS_BUFFER_SID                          (0x0000F025U)
@@ -141,6 +139,36 @@ extern "C" {
 #define MULTI_CORE_MULTI_CLIENT_CALL_TEST_0_VERSION                (1U)
 #define MULTI_CORE_MULTI_CLIENT_CALL_TEST_1_SID                    (0x0000F101U)
 #define MULTI_CORE_MULTI_CLIENT_CALL_TEST_1_VERSION                (1U)
+
+/******** CLIENT_PARTITION ********/
+#define CLIENT_TEST_DISPATCHER_SID                                 (0x0000FA01U)
+#define CLIENT_TEST_DISPATCHER_VERSION                             (1U)
+
+/******** SERVER_PARTITION ********/
+#define SERVER_TEST_DISPATCHER_SID                                 (0x0000FB01U)
+#define SERVER_TEST_DISPATCHER_VERSION                             (1U)
+#define SERVER_SECURE_CONNECT_ONLY_SID                             (0x0000FB02U)
+#define SERVER_SECURE_CONNECT_ONLY_VERSION                         (2U)
+#define SERVER_STRICT_VERSION_SID                                  (0x0000FB03U)
+#define SERVER_STRICT_VERSION_VERSION                              (2U)
+#define SERVER_UNSPECIFED_VERSION_SID                              (0x0000FB04U)
+#define SERVER_UNSPECIFED_VERSION_VERSION                          (1U)
+#define SERVER_RELAX_VERSION_SID                                   (0x0000FB05U)
+#define SERVER_RELAX_VERSION_VERSION                               (2U)
+#define SERVER_UNEXTERN_SID                                        (0x0000FB06U)
+#define SERVER_UNEXTERN_VERSION                                    (2U)
+#define SERVER_CONNECTION_DROP_SID                                 (0x0000FB07U)
+#define SERVER_CONNECTION_DROP_VERSION                             (2U)
+
+/******** DRIVER_PARTITION ********/
+#define DRIVER_UART_SID                                            (0x0000FC01U)
+#define DRIVER_UART_VERSION                                        (1U)
+#define DRIVER_WATCHDOG_SID                                        (0x0000FC02U)
+#define DRIVER_WATCHDOG_VERSION                                    (1U)
+#define DRIVER_NVMEM_SID                                           (0x0000FC03U)
+#define DRIVER_NVMEM_VERSION                                       (1U)
+#define DRIVER_TEST_SID                                            (0x0000FC04U)
+#define DRIVER_TEST_VERSION                                        (1U)
 
 #ifdef __cplusplus
 }

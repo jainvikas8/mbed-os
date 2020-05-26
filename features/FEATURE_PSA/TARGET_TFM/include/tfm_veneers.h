@@ -173,6 +173,18 @@ psa_status_t tfm_tfm_secure_client_2_call_veneer(psa_invec *in_vec, size_t in_le
 /******** TFM_SP_MULTI_CORE_TEST ********/
 #endif /* TFM_MULTI_CORE_TEST */
 
+#ifdef PSA_API_TEST_IPC
+/******** CLIENT_PARTITION ********/
+#endif /* PSA_API_TEST_IPC */
+
+#ifdef PSA_API_TEST_IPC
+/******** SERVER_PARTITION ********/
+#endif /* PSA_API_TEST_IPC */
+
+#ifdef PSA_API_TEST_IPC
+/******** DRIVER_PARTITION ********/
+#endif /* PSA_API_TEST_IPC */
+
 #ifdef __cplusplus
 }
 #endif

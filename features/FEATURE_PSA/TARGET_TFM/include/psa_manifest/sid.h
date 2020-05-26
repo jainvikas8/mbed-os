@@ -140,6 +140,36 @@ extern "C" {
 #define MULTI_CORE_MULTI_CLIENT_CALL_TEST_1_SID                    (0x0000F101U)
 #define MULTI_CORE_MULTI_CLIENT_CALL_TEST_1_VERSION                (1U)
 
+/******** CLIENT_PARTITION ********/
+#define CLIENT_TEST_DISPATCHER_SID                                 (0x0000FA01U)
+#define CLIENT_TEST_DISPATCHER_VERSION                             (1U)
+
+/******** SERVER_PARTITION ********/
+#define SERVER_TEST_DISPATCHER_SID                                 (0x0000FB01U)
+#define SERVER_TEST_DISPATCHER_VERSION                             (1U)
+#define SERVER_SECURE_CONNECT_ONLY_SID                             (0x0000FB02U)
+#define SERVER_SECURE_CONNECT_ONLY_VERSION                         (2U)
+#define SERVER_STRICT_VERSION_SID                                  (0x0000FB03U)
+#define SERVER_STRICT_VERSION_VERSION                              (2U)
+#define SERVER_UNSPECIFED_VERSION_SID                              (0x0000FB04U)
+#define SERVER_UNSPECIFED_VERSION_VERSION                          (1U)
+#define SERVER_RELAX_VERSION_SID                                   (0x0000FB05U)
+#define SERVER_RELAX_VERSION_VERSION                               (2U)
+#define SERVER_UNEXTERN_SID                                        (0x0000FB06U)
+#define SERVER_UNEXTERN_VERSION                                    (2U)
+#define SERVER_CONNECTION_DROP_SID                                 (0x0000FB07U)
+#define SERVER_CONNECTION_DROP_VERSION                             (2U)
+
+/******** DRIVER_PARTITION ********/
+#define DRIVER_UART_SID                                            (0x0000FC01U)
+#define DRIVER_UART_VERSION                                        (1U)
+#define DRIVER_WATCHDOG_SID                                        (0x0000FC02U)
+#define DRIVER_WATCHDOG_VERSION                                    (1U)
+#define DRIVER_NVMEM_SID                                           (0x0000FC03U)
+#define DRIVER_NVMEM_VERSION                                       (1U)
+#define DRIVER_TEST_SID                                            (0x0000FC04U)
+#define DRIVER_TEST_VERSION                                        (1U)
+
 #ifdef __cplusplus
 }
 #endif

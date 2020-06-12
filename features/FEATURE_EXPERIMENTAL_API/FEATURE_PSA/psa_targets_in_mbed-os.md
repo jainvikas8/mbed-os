@@ -200,10 +200,6 @@ In this case, following additional attributes **MUST** be added,
         ],
         "extra_labels_add": [
             "MBED_PSA_SRV"
-        ],
-        "macros_add": [
-            "MBEDTLS_PSA_HAS_ITS_IO",
-            "MBEDTLS_USE_PSA_CRYPTO"
         ]
 ```
 
@@ -267,9 +263,7 @@ The following example shows a PSA enabled dual-core target, `PSoC64`.
         "macros_add": [
             "CYB0644ABZI_S2D44",
             "CYBSP_WIFI_CAPABLE",
-            "TFM_MULTI_CORE_MULTI_CLIENT_CALL=1",
-            "MBEDTLS_PSA_HAS_ITS_IO",
-            "MBEDTLS_USE_PSA_CRYPTO"
+            "TFM_MULTI_CORE_MULTI_CLIENT_CALL=1"
         ],
         "detect_code": [
             "190A"
@@ -323,10 +317,6 @@ attributes have been added,
         "extra_labels_add": [
             "TFM",
             "TFM_DUALCPU"
-        ],
-        "macros_add": [
-            "MBEDTLS_PSA_HAS_ITS_IO",
-            "MBEDTLS_USE_PSA_CRYPTO"
         ]
 ```
 
@@ -435,10 +425,6 @@ added.
         "extra_labels_add": [
             "TFM",
             "TFM_V8M"
-        ],
-        "macros_add": [
-            "MBEDTLS_PSA_HAS_ITS_IO",
-            "MBEDTLS_USE_PSA_CRYPTO"
         ]
 ```
 
